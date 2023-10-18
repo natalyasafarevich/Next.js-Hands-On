@@ -8,7 +8,7 @@ async function getData() {
 
 async function News() {
 	const post = await getData();
-	console.log(post);
+	// console.log(post);
 	return (
 		<div className="news">
 			<h1 className="news__title">News Title</h1>

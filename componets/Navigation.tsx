@@ -18,7 +18,7 @@ export default function Navigation({ navLink }: Props) {
 			{navLink.map((link) => {
 				const isActive = pathname === link.href;
 				return (
-					<Link href={link.href} className={isActive ? "active" : ""}>
+					<Link key={link.label} href={link.href} className={isActive ? "active" : ""}>
 						{link.label}
 					</Link>
 				);
