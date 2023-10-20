@@ -13,7 +13,7 @@ type Props = {
 export default function Navigation({ navLink }: Props) {
 	//! useSession() - только в клиенстком компоненте
 	const session = useSession();
-	console.log(session);
+	// console.log(session);
 
 	const pathname = usePathname();
 	console.log(pathname);

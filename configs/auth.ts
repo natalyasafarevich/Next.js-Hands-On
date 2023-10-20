@@ -1,6 +1,7 @@
 import {redirect} from 'next/navigation';
-import type {AuthOptions, User}
+import type {AuthOptions}
 from 'next-auth';
+import {User} from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import Credentials from 'next-auth/providers/credentials';
 import {users} from '@/users';
@@ -46,5 +47,8 @@ export const authConfig: AuthOptions = {
         }
       }
     )
-  ]
+  ],
+  pages:{
+    signIn:'/signin'
+  }
 }
