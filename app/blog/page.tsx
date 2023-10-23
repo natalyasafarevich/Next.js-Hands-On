@@ -2,9 +2,10 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 // получение данных
-
-async function getData() {
+export const revalidate = 360
+export async function getData() {
 	const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+		cache: "force-cache",
 		next: { revalidate: 60 },
 	});
 	return response.json();
